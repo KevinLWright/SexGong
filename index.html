@@ -25,17 +25,15 @@
     }
   </style>
   <script>
-  document.getElementById('play').addEventListener('click', function (e) {
-  e.preventDefault();
-  document.getElementById('audio').play();
-});
+  function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
   </script>
   <body>
     <div class="container">
+      <input class="sexgong" type="image" src="images/SexGong.jpg" value="PLAY" onclick="play()">
       <audio id="audio" src="audio/SexGong.mp3"></audio>
-      <a href="#" id="play">
-	    <img class="sexgong" src="/images/SexGong.jpg" alt="Sex Gong">
-      </a>
     </div>
   </body>
 </html>
