@@ -23,8 +23,20 @@
       height: 40em;
       width: 40em;
     }
-	  
-	  .noSelect {
+    
+    .unmute {
+  background-image: url(http://franriavilla.in/images/unmute.png);
+  background-size: cover;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.mute {
+  background-image: url(http://franriavilla.in/images/mute.png);
+}
+    
+    	  .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -42,10 +54,12 @@
         audio.play();
       }
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <body>
     <div class="container">
       <input class="sexgong noselect" type="image" src="images/SexGong.jpg" value="PLAY" onclick="play()">
       <audio id="audio" src="audio/SexGong.mp3"></audio>
     </div>
+    <div class='unmute' onclick="document.getElementById('audio').muted = !document.getElementById('audio').muted;$(this).toggleClass('mute')"></div>
   </body>
 </html>
